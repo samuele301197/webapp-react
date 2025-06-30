@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 const MovieCard = ({ movie}) => {
     const { id, title, director, abstract, image} = movie;
     return (
@@ -6,7 +7,7 @@ const MovieCard = ({ movie}) => {
   <div className="card-body">
     <h5 className="card-title">{title}  -  {director}</h5>
     <p className="card-text">{abstract}</p>
-    <a href="#" className="btn btn-primary">Dettagli</a>
+    <Link to={`/movies/${id}`} className="btn btn-primary">Dettagli</Link>
   </div>
 </div>
     );
