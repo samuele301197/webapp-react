@@ -4,6 +4,7 @@ import Home from "../src/pages/Home";
 import Movies from "../src/pages/Movies";
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import GuestLayout from './layout/GuestLayout'
+import SingleMovie from './pages/SingleMovie';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Route element={<GuestLayout />}>
         <Route path='/' element={<Home />} />
         <Route path='/movies' element={<Movies />} />
+        <Route path='/movies/:id' element={<SingleMovie />} />
       </Route>
     </Routes>
     </BrowserRouter>

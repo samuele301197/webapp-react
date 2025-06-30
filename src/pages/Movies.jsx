@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import MovieCard from "../components/MovieCard.jsx";
 
 const Movies = () => {
     const [movies, setMovies] = useState([])
@@ -11,9 +12,18 @@ const Movies = () => {
     }, []);
     return (
         <>
-        <main>
-            <h1>Movies</h1>
-            </main>
+    <main>
+        <section className="container py-5">
+            <h1 className="text-center">Movies</h1>
+            <div className="row g-3">
+                {movies.map((curMovie) => (
+                    <div key={curMovie.id} className="col">
+                        <MovieCard movie={curMovie} />
+                    </div>
+                ))}                
+            </div>
+        </section>
+    </main>
         </>
     );
 };
