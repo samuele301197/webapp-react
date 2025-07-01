@@ -3,7 +3,7 @@ import Stars from "../Stars";
 const ReviewCard = ({ review }) => {
   const { name, vote, text, created_at } = review;
   return (
-    <div className="card">
+    <div className="card my-3">
       <div className="card-header">
         <Stars vote={vote} />
       </div>
